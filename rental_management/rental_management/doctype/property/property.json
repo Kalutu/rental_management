@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2025-01-09 12:51:59.033032",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "property",
+  "geolocation",
+  "location",
+  "landlord",
+  "column_break_jqox",
+  "agent_details_tab",
+  "agent",
+  "chargeable_services",
+  "collection_details_tab",
+  "collecting_party"
+ ],
+ "fields": [
+  {
+   "fieldname": "property",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "geolocation",
+   "fieldtype": "Geolocation",
+   "label": "Geolocation"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Small Text",
+   "label": "Location"
+  },
+  {
+   "fieldname": "landlord",
+   "fieldtype": "Link",
+   "label": "Landlord",
+   "options": "Landlord"
+  },
+  {
+   "fieldname": "agent_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Agent Details"
+  },
+  {
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "label": "Agent",
+   "options": "Agent"
+  },
+  {
+   "fieldname": "chargeable_services",
+   "fieldtype": "Table",
+   "label": "Chargeable Services",
+   "options": "Chargeable Services"
+  },
+  {
+   "fieldname": "collection_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Collection Details"
+  },
+  {
+   "fieldname": "collecting_party",
+   "fieldtype": "Select",
+   "label": "Collecting Party",
+   "options": "Agent\nLandlord"
+  },
+  {
+   "fieldname": "column_break_jqox",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-09 15:23:19.674232",
+ "modified_by": "Administrator",
+ "module": "Rental Management",
+ "name": "Property",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "property"
+}

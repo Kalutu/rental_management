@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-09 13:22:12.325805",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "unit_name",
+  "property",
+  "type",
+  "unit_type",
+  "column_break_xdem",
+  "location",
+  "landlord",
+  "agent_details_tab",
+  "agent",
+  "chargeable_services"
+ ],
+ "fields": [
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit_type",
+   "fieldtype": "Select",
+   "label": "Unit Type",
+   "options": "Bed sitter\nOne bedroom\nTwo bedroom\nShop\nWarehouse"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Commercial\nResidential"
+  },
+  {
+   "fieldname": "column_break_xdem",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "property.location",
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "property.landlord",
+   "fieldname": "landlord",
+   "fieldtype": "Data",
+   "label": "Landlord",
+   "read_only": 1
+  },
+  {
+   "fieldname": "agent_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Agent Details"
+  },
+  {
+   "fetch_from": "property.agent",
+   "fieldname": "agent",
+   "fieldtype": "Data",
+   "label": "Agent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "chargeable_services",
+   "fieldtype": "Table",
+   "label": "Chargeable Services",
+   "options": "Chargeable Services"
+  },
+  {
+   "fieldname": "unit_name",
+   "fieldtype": "Data",
+   "label": "Unit Name",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-09 15:27:04.044188",
+ "modified_by": "Administrator",
+ "module": "Rental Management",
+ "name": "Unit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "unit_name"
+}
