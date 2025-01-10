@@ -5,19 +5,48 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "customer"
+  "landlord_name",
+  "email",
+  "phone_number",
+  "address",
+  "company"
  ],
  "fields": [
   {
-   "fieldname": "customer",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "address",
    "fieldtype": "Link",
-   "label": "Customer",
-   "options": "Customer"
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "landlord_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Landlord Name",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-09 15:16:00.763786",
+ "modified": "2025-01-10 14:23:24.753198",
  "modified_by": "Administrator",
  "module": "Rental Management",
  "name": "Landlord",
@@ -36,7 +65,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "landlord_name"
 }
