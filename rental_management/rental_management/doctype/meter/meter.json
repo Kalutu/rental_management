@@ -5,17 +5,85 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_fijn"
+  "meter_method",
+  "property",
+  "unit",
+  "meter_type",
+  "column_break_xfdi",
+  "initial_reading",
+  "current_reading",
+  "token_used",
+  "token_per_unit"
  ],
  "fields": [
   {
-   "fieldname": "section_break_fijn",
-   "fieldtype": "Section Break"
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.meter_method == \"Per Unit\"",
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Unit",
+   "mandatory_depends_on": "eval: doc.meter_method == \"Per Unit\"",
+   "options": "Unit"
+  },
+  {
+   "fieldname": "meter_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Meter Type",
+   "options": "Electricity\nWater",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xfdi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "initial_reading",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Initial Reading",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "current_reading",
+   "fieldtype": "Float",
+   "label": "Current Reading",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "token_used",
+   "fieldtype": "Float",
+   "label": "Token Used",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "meter_method",
+   "fieldtype": "Select",
+   "label": "Meter Method",
+   "options": "Per Unit\nFull Property"
+  },
+  {
+   "depends_on": "eval: doc.meter_method == \"Full Property\"",
+   "fieldname": "token_per_unit",
+   "fieldtype": "Float",
+   "label": "Token Per Unit"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-09 13:30:13.710438",
+ "modified": "2025-01-13 12:26:14.725201",
  "modified_by": "Administrator",
  "module": "Rental Management",
  "name": "Meter",
